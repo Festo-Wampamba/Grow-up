@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Grow-up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="stylesheet" href="services.css" />
+    <style>
+      /* Services Hero Section */
+.services-hero {
+  background-image: url('img/services-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-color);
+  position: relative;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(21, 42, 64, 0.7);
+}
+
+.services-hero__content {
+  max-width: 800px;
+  padding: 3rem;
+  background-color: rgba(21, 42, 64, 0.8);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.services-hero__content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.services-hero__content p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Services Grid Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 7rem 12%;
+  background-color: #f9f9f9;
+}
+
+.service-card {
+  background-color: var(--white-color);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--p-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Services Features Section */
+.services-features {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 7rem 12%;
+  text-align: center;
+}
+
+.services-features h2 {
+  font-size: 3.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.feature {
+  padding: 2.5rem;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.2);
+}
+
+.feature i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.feature h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 7rem 12%;
+}
+
+.cta h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.cta p {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .services-grid, .services-features, .cta {
+      padding: 5rem 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-hero__content h1 {
+      font-size: 3.5rem;
+  }
+
+  .services-features h2 {
+      font-size: 2.8rem;
+  }
+
+  .cta h2 {
+      font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero__content h1 {
+      font-size: 3rem;
+  }
+
+  .services-hero__content p {
+      font-size: 1.4rem;
+  }
+
+  .service-card {
+      padding: 2rem;
+  }
+
+  .services-features h2 {
+      font-size: 2.4rem;
+  }
+
+  .cta h2 {
+      font-size: 2.6rem;
+  }
+
+  .cta p {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .services-hero__content h1 {
+      font-size: 2.5rem;
+  }
+
+  .services-hero__content p {
+      font-size: 1.2rem;
+  }
+
+  .cta button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+  }
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="img/logo_dark.png" alt="logo" />
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <button>Schedule a Call <i class="ri-arrow-right-up-line"></i></button>
+        <div class="bars">
+          <i class="ri-menu-2-fill"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section class="services-hero">
+      <div class="services-hero__content">
+        <h1>Our Services</h1>
+        <p>Empowering your business with innovative solutions</p>
+      </div>
+    </section>
+
+    <section class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="ri-code-line"></i></div>
+        <h3>Technology Integration</h3>
+        <p>
+          Leverage cutting-edge technologies by integrating innovative solutions
+          into your business processes for enhanced performance.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ri-line-chart-line"></i></div>
+        <h3>Market Analysis</h3>
+        <p>
+          Stay ahead of the competition with our comprehensive market analysis,
+          providing insights into industry trends and consumer behavior.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-money-dollar-circle-line"></i>
+        </div>
+        <h3>Finance</h3>
+        <p>
+          Trust our financial expertise to transform your business, achieve
+          sustainable growth, and maximize profitability in any market
+          condition.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ri-customer-service-2-line"></i>
+        </div>
+        <h3>First-Class Services</h3>
+        <p>
+          We are committed to providing first-class services, empowering digital
+          innovations, and offering holistic mentorship for entrepreneurs.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ri-database-2-line"></i></div>
+        <h3>CRM Development</h3>
+        <p>
+          Build robust Customer Relationship Management systems tailored to your
+          business needs, enhancing customer interactions and loyalty.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ri-user-star-line"></i></div>
+        <h3>Entrepreneurial Mentorship</h3>
+        <p>
+          Receive personalized guidance and support to craft your
+          entrepreneurial journey, turning your vision into a successful
+          business reality.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-features">
+      <h2>Why Choose Our Services?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <i class="ri-rocket-2-line"></i>
+          <h4>Empowering Digital Innovations</h4>
+        </div>
+        <div class="feature">
+          <i class="ri-team-line"></i>
+          <h4>Holistic Mentorship for Entrepreneurs</h4>
+        </div>
+        <div class="feature">
+          <i class="ri-customer-service-line"></i>
+          <h4>Dedicated to Our Distinguished Clients</h4>
+        </div>
+        <div class="feature">
+          <i class="ri-lightbulb-line"></i>
+          <h4>Enhance Your Entrepreneurial Skills</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Your Trusted Partner in Growth</h2>
+      <p>Ready to take your business to the next level?</p>
+      <button>Get Started Today</button>
+    </section>
+
+    <!-- FOOTER SECTION  -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__column">
+          <img
+            src="img/logo_dark.png"
+            alt="Grow-up Logo"
+            class="footer__logo"
+          />
+          <p class="footer__description">
+            Expert business consulting to help you grow your online presence and
+            achieve your goals.
+          </p>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Quick Links</h3>
+          <ul class="footer__menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Contact Us</h3>
+          <p><i class="ri-phone-line"></i> (+256)-754230525</p>
+          <p><i class="ri-mail-line"></i> growup@business.com</p>
+          <p><i class="ri-map-pin-line"></i> Bugolobi 10315, Kampala, Uganda</p>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Follow Us</h3>
+          <div class="footer__social">
+            <a
+              href="https://github.com/Festo1/"
+              class="footer__social-icon"
+              title="github"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://twitter.com/festo_ug"
+              class="footer__social-icon"
+              title="Twitter"
+              ><i class="ri-twitter-fill"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/festo_u.g/"
+              class="footer__social-icon"
+              title="Instagram"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/festoug/"
+              class="footer__social-icon"
+              title="LinkedIn"
+              ><i class="ri-linkedin-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Grow Up for Business. All Rights Reserved.</p>
+        <p>
+          Designed by
+          <a href="https://www.festoug.me/" class="footer__link">FESTOUG</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Swiper Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      // MENU TOGGLE
+
+      let bar = document.querySelector(".bars");
+      let menu = document.querySelector(".menu");
+
+      bar.addEventListener("click", () => {
+        menu.classList.toggle("show_menu");
+      });
+    </script>
+  </body>
+</html>
